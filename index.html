@@ -1,1 +1,31 @@
-blah
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/svg+xml" href="/wildflower/favicon.svg">
+    <meta charset="utf-8">
+    <meta property="og:image" content="snow-trillium-banner.jpg">
+    <meta property="og:title" content="Online Wildflower Checklist">
+    <title>Online Wildflower Checklist</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.9.0/brython.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.9.0/brython_stdlib.min.js">
+    </script>
+    <link rel="stylesheet" href="wildflower.css">
+</head>
+<body onload="brython()">
+<script type="text/python">
+from browser import document
+document["around"].innerHTML = "importing..."
+import leastobserved
+document["around"].innerHTML = "ready..."
+leastobserved.main()
+</script>
+<div class="ui">
+    <span>iNaturalist user id:</span><input class="short" type="text" id="edit_user" value="elias105"></input>
+    <button id="button_submit">Update</button>
+</div>
+<div id="around">
+loading...
+</div>
+</body>
+</html>
