@@ -1,0 +1,189 @@
+
+@media print { body { -webkit-print-color-adjust: exact; } }
+
+sup {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.5em;
+  font-size: x-small;
+}
+body {
+    font-family: sans-serif;
+}
+div {
+    box-sizing: border-box;
+}
+span {
+    box-sizing: border-box;
+}
+div.around {
+    position: relative
+}
+div.page {
+    position: relative;
+}
+div.column {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    border-left: 0.125em solid transparent;
+    border-top: 0.125em solid transparent;
+    border-right: 0.125em solid transparent;
+    border-bottom: 0.125em solid transparent;
+    padding: 0.25em 0em 0.25em 0.25em;
+    margin-right: 1em;
+}
+div.column + div.column {
+    border-left: 0.125em solid black;
+}
+div.vline {
+    position: absolute;
+    width: 1px;
+    border-left: 1px solid gray;
+    top: 0em;
+}
+div.debugvline {
+    position: absolute;
+    width: 1px;
+    border-left: 1px solid red;
+    border-right: 1px solid blue;
+    top: 0em;
+    height: 10em;
+    z-index: 2;
+}
+img.pic {
+    object-fit: cover;
+    width: 4.1em;
+    height: 4.1em;
+    margin-bottom: -1.5em;
+    margin-top: -1.5em;
+    border: 1px solid black;
+    position: relative;
+}
+div.pic {
+    position: relative;
+    display: inline-block;
+}
+span.instruction {
+    margin-left: 6em;
+}
+.instruction i {
+    font-size: small;
+}
+span.info {
+    position: absolute;
+    border-radius: 0.25em;
+    background-color: linen;
+    padding: 0.5em;
+    z-index: 1;
+    display: none;
+    white-space: nowrap;
+    min-width: 12em;
+    left: 1em;
+}
+div.pic:hover span.info {
+    display: block;
+}
+span.name {
+    display: inline-block;
+    width: 16em
+}
+a.name {
+    display: inline-block;
+    width: 16em;
+    white-space: nowrap;
+    overflow: clip;
+}
+span.seen {
+    display: inline-block;
+    position: relative;
+    width: 7em;
+    margin: 0px 0.5em;
+    height: 1.4em;
+    border: 1px solid skyblue;
+}
+span.seen:hover span.info {
+    display: block;
+}
+div.months {
+    position: relative;
+    height: 4em;
+}
+span.month {
+    transform: translate(-50%,150%)rotate(-45deg)translate(50%);
+    display: block;
+    position: absolute;
+    top: 1em;
+}
+div.col0 {left: 0em}
+div.col1 {left: 4.5em}
+div.col2 {left: 9em}
+div.rows {
+    position: relative;
+}
+div.row {
+    position: relative;
+    overflow: visible;
+    display: flex;
+    height: 1.5em;
+    }
+span.title {
+    font-size: x-large;
+}
+div.header {
+    position: relative;
+    overflow: visible;
+    display: inline-block;
+    }
+div.histogram {
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 1px solid #d0d0d0;
+}
+div.bar {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 0.5em;
+    border-width: 0em 0em 0em 0.5em;
+    border-style: solid;
+}
+input {
+    font-family: monospace;
+    font-size: small;
+    width: 60em}
+input.short {width: 10em}
+textarea {
+    font-family: monospace;
+    font-size: small;
+    width: 60em;
+    vertical-align: middle;
+}
+button#button_fetch {
+    font-size: x-large;
+}
+.label {
+    display: inline-block;
+    width: 6em;
+}
+div#dates {
+    display: flex;
+    flex-wrap: wrap;
+}
+div.day {
+    margin-right: 1em;
+}
+div.day b {
+    background: skyblue;
+    font-weight: normal;
+}
+div.day:hover span.info {
+    display: block;
+}
+nav#menu {display:inline}
+#menu ul.menubar {display:inline-block; padding:0em; list-style:none;
+    border: 1px solid black; padding: 4px}
+#menu ul.submenu {position:absolute; z-index: 99; background:white;
+	list-style:none; padding: 4px;
+	border: 1px solid black; display: none} 
+#menu li:hover > ul.submenu {display: block}
+#menu ul.submenu li:hover {background: silver}
